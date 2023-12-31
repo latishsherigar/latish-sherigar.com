@@ -1,0 +1,71 @@
+LATISH SHERIGAR
+B-703, Sunflower, Flower Valley, Khadakpada, Kalyan - 421301. / mail@latish-sherigar.com  / 9819087305
+
+Highly skilled and experienced software developer possessing expertise in software development with 
+Java and Oracle PL/SQL based web applications. Strong knowledge of the full software development life 
+cycle.
+Quick learner. Sterling reputation for working on multiple technical technologies with ease and skillfully 
+designing applications.
+
+PROFESSIONAL EXPERIENCE	
+
+Mastek Ltd. Mumbai (formerly Keystone Solutions, Mumbai).                           Jun 2006 - Current                                                      
+Product Analyst
+Analyze and evaluate project requirements. Create practical solutions to fulfill the business needs that 
+comply with quality standards and technical requirements. Supervise a team of four. Develop and 
+implement new products for Product Research and Development group. 
+
+*	Assigned, Coordinated and reviewed the work of junior developers working on the new 
+architecture of the Mastek’s P&C STG Billing suite.
+*	Consulted with business analysts and functional experts to clarify the project requirements 
+and design the solutions.
+*	Coded web services using Apache CXF framework and Apache common chain framework.
+*	Coded a Compiler and Execution engine in Java for a Kognito’s ETL tool which was a GUI only 
+tool. Enabled the whole setup to work seamlessly as a batch process with required error 
+handling and failure control processes.  
+*	Developed backend packages, procedures and triggers in Oracle PLSQL.
+*	Developed a Ticket dependency tracking tool and a release build tool in Java/PHP and Mysql for 
+the release team to maintain dependency between various releases as a part of project level 
+initiatives.
+*	Served as a non official technical consultant for many groups outside the project.
+
+St Xavier’s Technical Institute, Mahim.                                            Apr 2004 – Jun 2006                                                      
+Software Development Group ,Software Consultant
+
+Client: Holy Family Hospital, Mumbai.	
+
+Development and maintenance of a Hospital Health care management system. 
+
+*	Coded a billing module for hospitals Inpatients department in Visual Basic and Oracle PLSQL. 
+*	Migrated business logic from Visual basic to Oracle PLSQL for 2 modules.
+*	Actively participated in designing and creating interfaces as a part of integration activity for a 
+third part pharmacy product
+
+
+TECHNICAL SKILLS
+
+Languages	Java, Oracle PL/SQL, PHP, Visual Basic, ASP,  XML,  XSL, HTML, Java Script.
+Frameworks	Web services (Apache CXF), Spring, Apache iBatis.
+Databases	Oracle, Mysql, MSAccess.
+SCM	            SVN, Visual Source Safe.
+Dev Tools	Eclipse,  SQL Developer, Toad, SQLPlus Ant , JBoss
+Reporting	Jasper, iReport, Oracle reports, VB Data reports, Crystal Reports.
+Software	Rational Clear Quest, MS Office.
+OS	            Windows, Linux.
+Hardware	PC, Peripherals, Basic Networking.
+
+EDUCATION
+
+Bachelor’s in Information Technology, Indira Gandhi National Open University,64.71%
+Higher National Diploma in Computing, Edexcel U.K, MERIT
+D.E.R.E (Diploma in Electronics and Radio Engineering), St Xavier’s Technical Institute, Mahim.  
+Autonomous Board, 79.95%
+H.S.C	, Birla College of Arts, Commerce and Science, Kalyan , 57.43%
+S.S.C	, St Thomas English School, Kalyan ,67.46%
+		
+
+MISCELLANEOUS		
+
+I maintain a website and blog at http://www.latish-sherigar.com 
+Recipient of the1st prize for open software development contest in Computer Society India, Ideas 
+2004 technical event. 	
