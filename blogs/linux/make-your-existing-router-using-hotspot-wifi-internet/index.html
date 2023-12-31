@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
 
-<!-- Mirrored from localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 15:49:51 GMT -->
+<!-- Mirrored from localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 18:51:51 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 	<meta charset="UTF-8">
@@ -52,12 +52,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='genericons-css' href='../wp-content/themes/twentyfifteen/genericons/genericons0cca.css?ver=20201026' media='all' />
 <link rel='stylesheet' id='twentyfifteen-style-css' href='../wp-content/themes/twentyfifteen/style2a09.css?ver=20231107' media='all' />
 <link rel='stylesheet' id='twentyfifteen-block-style-css' href='../wp-content/themes/twentyfifteen/css/blocks19c9.css?ver=20230623' media='all' />
-<script src="../wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
-<script src="../wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="../wp-includes/js/jquery/jquery.minf43b.html?ver=3.7.1" id="jquery-core-js"></script>
+<script src="../wp-includes/js/jquery/jquery-migrate.min5589.html?ver=3.4.1" id="jquery-migrate-js"></script>
 <script id="twentyfifteen-script-js-extra">
 var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
 </script>
-<script src="../wp-content/themes/twentyfifteen/js/functions4705.js?ver=20221101" id="twentyfifteen-script-js" defer data-wp-strategy="defer"></script>
+<script src="../wp-content/themes/twentyfifteen/js/functions4705.html?ver=20221101" id="twentyfifteen-script-js" defer data-wp-strategy="defer"></script>
 <link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/posts/224.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
 <meta name="generator" content="WordPress 6.4.2" />
 <link rel="canonical" href="index.html" />
@@ -165,8 +165,8 @@ var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand chil
 <p><strong>Problem:</strong> How to connect my existing router to use the internet from the Jio hotspot device</p>
 <p>JioFI and other hotspot variants are technically 2 devices combined into 1 . There is a modem which takes your SIM and connects to the network for internet . There is another piece of hardware which takes this internet and creates a wifi network. The usual routers available in market assume that there will always be a wired internet available at an RJ45 Ethernet WAN port for which they have to create the wifi network. Technically if you are using a hotspot device there is no need for another router which also does the same job. Well in my case my router is responsible for creating my home LAN network and also has a much larger range than the hotspot device. I have a wireless printer which connects to my home network for print jobs. There are other devices which use the router WIFI for internet. The problem statement here was to somehow add the functionality in my router so that it can get the internet from the hotspot and beam it own Wifi network so that the other clients are not disturbed. They get the same internet as always and are unaware that anything has changed, which is how it should be.</p>
 <p>A google search revealed several posts and videos which recommend to use <a href="https://en.wikipedia.org/wiki/Wireless_distribution_system">WDS ie Wireless Distribution System</a>. My router did not support this mode. Also WDS is a variant of repeater mode which means your hotspot would be responsible for creating and maintaining the LAN using DHCP.  Your older router would act as a subordinate which is what i did not want as the hotspot did not offer much customization.</p>
-<p><strong>Solution:</strong> I put my R&amp;D hat on. I had an old Linksys router lying around on which I had installed DDWRT the powerful firmware sometime back but was not using it. <a href="http://www.dd-wrt.com/">DDWRT</a>  is a beautiful and powerful piece of software which turbo chargers your routers with features which the manufactures never intended to built into the product. I had written about it in the past <a href="http://www.latish-sherigar.com/blogs/linux/cheaper-way-to-increasing-your-wifi-range/">here</a>. There are modes in which the router can be configured.</p>
-<p><a href="../../../../www.latish-sherigar.com/blogs/linux/wp-content/20180318_211558.jpg"><img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-278" src="../../../../www.latish-sherigar.com/blogs/linux/wp-content/20180318_211558-300x261.jpg" alt="" width="300" height="261" /></a></p>
+<p><strong>Solution:</strong> I put my R&amp;D hat on. I had an old Linksys router lying around on which I had installed DDWRT the powerful firmware sometime back but was not using it. <a href="http://www.dd-wrt.com/">DDWRT</a>  is a beautiful and powerful piece of software which turbo chargers your routers with features which the manufactures never intended to built into the product. I had written about it in the past <a href="../cheaper-way-to-increasing-your-wifi-range/index.html">here</a>. There are modes in which the router can be configured.</p>
+<p><a href="../wp-content/20180318_211558.html"><img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-278" src="../wp-content/20180318_211558-300x261.html" alt="" width="300" height="261" /></a></p>
 <p>Access point is the mode in which we expect our routers to operate in which it converts wired to wifi. &#8216;Client&#8217; mode is what would solve my problem. In this mode the devices acts as a client and connects to the hotspot wifi and provides the internet in to the router LAN ports. This LAN port of the intermediate router needs to be connected to the WAN port of the main router. This is all that is needed.</p>
 <p>My main router now connects to the Linksys router with DDWRT which in turn connects to the wifi hotspot for internet. Another day , new learning!</p>
 	</div><!-- .entry-content -->
@@ -215,5 +215,5 @@ var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand chil
 
 </body>
 
-<!-- Mirrored from localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 15:50:03 GMT -->
+<!-- Mirrored from localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 18:51:51 GMT -->
 </html>
