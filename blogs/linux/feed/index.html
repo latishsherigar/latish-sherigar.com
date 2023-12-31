@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Techno</title>
+	<atom:link href="http://localhost/blogs/linux/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost/blogs/linux</link>
+	<description>Lets get geeky</description>
+	<lastBuildDate>Fri, 07 May 2021 16:50:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.2</generator>
+	<item>
+		<title>NodeMCU with buzzer</title>
+		<link>http://localhost/blogs/linux/nodemcu-with-buzzer/</link>
+					<comments>http://localhost/blogs/linux/nodemcu-with-buzzer/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Fri, 07 May 2021 16:50:10 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=335</guid>
+
+					<description><![CDATA[If you are trying out the active buzzer module with Arduino and NodeMCU , a point to be remembered is the power consumption of the buzzer. Although the same code works for both the MCU&#8217;s , there is a difference in the runtime behavior. In my case I noticed that I was not able to &#8230; <a href="http://localhost/blogs/linux/nodemcu-with-buzzer/" class="more-link">Continue reading <span class="screen-reader-text">NodeMCU with buzzer</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>If you are trying out the active buzzer module with Arduino and NodeMCU , a point to be remembered is the power consumption of the buzzer. Although the same code works for both the MCU&#8217;s , there is a difference in the runtime behavior.  </p>
+
+
+
+<p>In my case I noticed that I was not able to upload the code on NodeMCU as it appeared that the micro controller was kind of resetting or some internal trip switch was getting activated. I therefore removed the buzzer module and uploaded the code on NodeMCU and then reconnected the buzzer again. The GPIO pin which was connected to the buzzer module and which I had coded to be 5V started to go zero volts. These 2 points made be think that there surely was some power related issue and may be the buzzer was overloading the NodeMCU board. Just to add Arduino had worked fine with this connection and therefore i had gone ahead with the same design on NodeMCU. I therefore decided to drive the buzzer via a relay and as I had suspected the weird behavior went away. I was now able to upload the code on to NodeMCU when the buzzer was connected and also the buzzer module worked fine as expected in the code. I then did a search and found a post which confirmed by analysis. The design in the post does talk about the power consumption limit in NodeMCU and how it can be worked around. </p>
+
+
+
+<figure class="wp-block-embed-wordpress wp-block-embed is-type-wp-embed is-provider-techtutorialsx"><div class="wp-block-embed__wrapper">
+https://techtutorialsx.com/2016/05/07/esp826-controlling-a-buzzer/
+</div></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/nodemcu-with-buzzer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Raspberry Pi Media center</title>
+		<link>http://localhost/blogs/linux/raspberry-pi-media-center/</link>
+					<comments>http://localhost/blogs/linux/raspberry-pi-media-center/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 05 Sep 2019 16:57:59 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=331</guid>
+
+					<description><![CDATA[I was a big believer of HTPC (Home Theater Personal computer) and therefore upgraded my desktop some time back so that it could be connected to my Yamaha AV receiver. I also custom built/modified a custom remote using a old DVD player remote so that I could operate it without using a keyboard/mouse. In case &#8230; <a href="http://localhost/blogs/linux/raspberry-pi-media-center/" class="more-link">Continue reading <span class="screen-reader-text">Raspberry Pi Media center</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>I was a big believer of HTPC (Home Theater Personal computer) and therefore upgraded my desktop some time back so that it could be connected to my Yamaha AV receiver. I also custom built/modified a <a href="http://www.latish-sherigar.com/blogs/linux/building-remote-for-my-media-center-pc/">custom remote</a> using a old DVD player remote so that I could operate it without using a keyboard/mouse. In case you are interested in details of that build <a href="http://www.latish-sherigar.com/blogs/linux/building-remote-for-my-media-center-pc/">here is the post</a>. </p>
+
+
+
+<p>I used this setup for some time but later came to the conclusion that the desktop form factor  does not fit well in a living room media player setup. At this point I decided to give Raspberry pi a try. I had an Model B+ lying around which was just used by me once in a while for my experiments. I had the impression that it would crash or in worst case burnout with the &#8220;heavy&#8221; media files i was going to throw at it. I still went ahead withe the following setup</p>
+
+
+
+<ol><li>Media &#8211;  A USB portable  hard disk which had my media files.</li><li>USB remote &#8211; The one i mentioned above</li><li>Display &#8211; HDMI output connected to TV.</li><li>Audio &#8211; USB to Optical / TOSLINK audio sound card which is then connected to my AV receiver.</li><li>Internet (Optional) &#8211; A USB WIFI adapter which can be used for installing additional software or getting updates.</li><li>Operating System &#8211; OSMC &#8211; <a href="https://osmc.tv/">https://osmc.tv</a></li></ol>
+
+
+
+<p>I was blown away by the performance of the setup. It was performing exactly like my desktop computer without any slowness.The audio and video play back was super smooth. I was also able to get Dolby Digital output from the sound card without any effort. OSMC is a beauty and works like a charm. Full marks to its developers.</p>
+
+
+
+<p>I am extremely happy with the current setup and also proud of myself (especially the remote <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> for getting this setup working.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/raspberry-pi-media-center/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How does a WIFI antenna really look like ?</title>
+		<link>http://localhost/blogs/linux/how-does-a-wifi-antenna-really-look-like/</link>
+					<comments>http://localhost/blogs/linux/how-does-a-wifi-antenna-really-look-like/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 05 Sep 2019 16:34:18 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=328</guid>
+
+					<description><![CDATA[I got lucky and had a chance to fix a broken antenna of my wifi router.]]></description>
+										<content:encoded><![CDATA[
+<p>I got lucky and had a chance to fix a broken antenna of my wifi router.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.latish-sherigar.com/blogs/linux/wp-content/wifi_antenna-1024x768.jpeg" alt="" class="wp-image-329"/></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/how-does-a-wifi-antenna-really-look-like/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>NodeMCU</title>
+		<link>http://localhost/blogs/linux/nodemcu/</link>
+					<comments>http://localhost/blogs/linux/nodemcu/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Mon, 21 Jan 2019 16:54:44 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=323</guid>
+
+					<description><![CDATA[And so the NodeMCU journey begins&#8230;..]]></description>
+										<content:encoded><![CDATA[
+<p>And so the <a href="http://www.nodemcu.com/index_en.html">NodeMCU</a> journey begins&#8230;..</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.latish-sherigar.com/blogs/linux/wp-content/IMG_20190121_221735_HDR-1024x768.jpg" alt="" class="wp-image-324"/></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/nodemcu/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Building remote for my media center PC</title>
+		<link>http://localhost/blogs/linux/building-remote-for-my-media-center-pc/</link>
+					<comments>http://localhost/blogs/linux/building-remote-for-my-media-center-pc/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sat, 19 Jan 2019 13:47:27 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=285</guid>
+
+					<description><![CDATA[Around a year back I had posted on how I built my media center PC aka HTPC (Home Theater Personal Computer) . I had been operating that using my wireless keyboard and mouse which satisfied all my functional requirements. To work as a true media center though i felt it had to work with a &#8230; <a href="http://localhost/blogs/linux/building-remote-for-my-media-center-pc/" class="more-link">Continue reading <span class="screen-reader-text">Building remote for my media center PC</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Around a year back I had <a href="http://www.latish-sherigar.com/blogs/linux/how-i-built-my-media-center-pc-htpc/">posted</a> on how I built my media center PC aka HTPC (Home Theater Personal Computer) . I had been operating that using my wireless keyboard and mouse which satisfied all my functional requirements. To work as a true media center though i felt it had to work with a standard television remote.</p>
+<p>I had therefore thought of adding a Infrared receiver (IR) connected to my media center PC which would allow me to use a regular TV/ DVD remote control to operate it. I looked around for some ready made IR receivers but the only one i found decent enough was <a href="https://flirc.tv/more/flirc-usb">Flirc</a> . The price was on higher side though which was around 20 USD in addition to availability only in US. This meant that I had to wait for someone coming back to India from US in addition to paying a good amount of money. I therefore decided to go ahead and build my own.</p>
+<p>Requirement:</p>
+<p>A micro controller based circuit which will accept commands from any existing remote control and pass these as keyboard commands.</p>
+<p>Components required -:</p>
+<ol>
+<li><span class="il">Pro</span> <span class="il">Micro</span> 5V 16M Mini Leonardo <span class="il">Micro</span>-controller Development Board For Arduino</li>
+<li>TSOP1738 Infrared receiver.</li>
+</ol>
+<p>Details-:</p>
+<p>The Pro micro Arduino board has a great feature that it can act as standard USB keyboard to your PC with the help of a library. This made the work a lot easier as I then only had to read the IR remote commands and then convert them into equivalent USB keys and send them to PC. For the PC , it appears like it is just a standard keyboard and therefore no special driver or any software is required to be installed on the PC. Every IR remote sends a different set of commands for every key and after some debugging, I had the list of commands which my DVD remote was using. After coding that into the arduino code and writing some new code to map it to PC keys, the thing was working as expected. I then used a old Nokia charger which I had lying around to place the arduino and the IR receiver. Below is the working video and some pics of the board and the final product.</p>
+<p>[embedyt] https://www.youtube.com/watch?v=OQekaL9HOUY[/embedyt].</p>
+<p> <img decoding="async" src="http://www.latish-sherigar.com/blogs/linux/wp-content/IMG-20180925-WA0009.jpg" /></p>
+<p><img decoding="async" src="http://www.latish-sherigar.com/blogs/linux/wp-content/IMG-20190119-WA0008.jpg" /> </p>
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/building-remote-for-my-media-center-pc/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>My water fountain</title>
+		<link>http://localhost/blogs/linux/my-water-fountain/</link>
+					<comments>http://localhost/blogs/linux/my-water-fountain/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Thu, 17 Jan 2019 17:13:48 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=291</guid>
+
+					<description><![CDATA[As a part of my DIY hobby projects I had recently created a indoor water fountain out of the things which were lying around the house unused.  This project used the following -: A submersible pump (18 w) which is used in air coolers, fountains. I did not select this for the rating but because &#8230; <a href="http://localhost/blogs/linux/my-water-fountain/" class="more-link">Continue reading <span class="screen-reader-text">My water fountain</span></a>]]></description>
+										<content:encoded><![CDATA[<p>As a part of my DIY hobby projects I had recently created a indoor water fountain out of the things which were lying around the house unused.  This project used the following -:</p>
+<ol>
+<li>A submersible pump (18 w) which is used in air coolers, fountains. I did not select this for the rating but because it was available on a good discount on Amazon.</li>
+<li>A clay pot which was at home.</li>
+<li>My daughters water bottle.</li>
+<li>Base of the plant pot</li>
+</ol>
+<p>Working:</p>
+<p>The pump is connected to the base of the water bottle and pushes water upwards. The cap of the water bottle has holes drilled which allows the water to come out.  Also added few money plants to give it a natural look. Below are few pics and a video.</p>
+<p>[embedyt] https://www.youtube.com/watch?v=BbR89G03KZY[/embedyt]</p>
+<p><img fetchpriority="high" decoding="async" class="alignnone" src="http://www.latish-sherigar.com/blogs/linux/wp-content/IMG_20181225_115216_HDR-e1547744192343.jpg" alt="" width="547" height="718" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/my-water-fountain/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Slow updates with DNF in Fedora</title>
+		<link>http://localhost/blogs/linux/dnf-in-fedora-slowness/</link>
+					<comments>http://localhost/blogs/linux/dnf-in-fedora-slowness/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Mon, 14 Jan 2019 15:47:41 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=289</guid>
+
+					<description><![CDATA[The DNF utility in my Fedora 28 system had been running slow recently. For quite some i had ignored it assuming it to be a bandwidth issue at my end or at their end. Since this happened for quite some time, i had to look for some help and i did find it. Apparently there &#8230; <a href="http://localhost/blogs/linux/dnf-in-fedora-slowness/" class="more-link">Continue reading <span class="screen-reader-text">Slow updates with DNF in Fedora</span></a>]]></description>
+										<content:encoded><![CDATA[<p>The DNF utility in my Fedora 28 system had been running slow recently. For quite some i had ignored it assuming it to be a bandwidth issue at my end or at their end. Since this happened for quite some time, i had to look for some help and i did find it. Apparently there is a config &#8220;<strong>fastestmirror=true</strong>&#8221; which needs to be done in <em>/etc/dnf/dnf.conf</em> . Post this the system was back to its blazing fast mode <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> .</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/dnf-in-fedora-slowness/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Make your existing router use hotspot wifi internet</title>
+		<link>http://localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/</link>
+					<comments>http://localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 18 Mar 2018 17:21:20 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=277</guid>
+
+					<description><![CDATA[UPDATE (5-SEP-2019) &#8211; There is something called WISP (Wireless ISP) mode in almost all new routers in market now. This mode solves the exact problem which I was trying to solve back then. I upgraded to a TPLINK router which has this mode and it works beautifully. You can still go ahead and read the &#8230; <a href="http://localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/" class="more-link">Continue reading <span class="screen-reader-text">Make your existing router use hotspot wifi internet</span></a>]]></description>
+										<content:encoded><![CDATA[<p>UPDATE (5-SEP-2019) &#8211;<em> There is something called <a href="https://en.wikipedia.org/wiki/Wireless_Internet_service_provider">WISP</a> (Wireless ISP) mode in almost all new routers in market now. This mode solves the exact problem which I was trying to solve back then. I upgraded to a TPLINK router which has this mode and it works beautifully. You can still go ahead and read the below post for academic purpose or just to know some ways I keep on wasting my time <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> </em></p>
+<p>&#8212;&#8212;&#8211;ORIGINAL POST BELOW&#8212;&#8212;&#8212;&#8212;&#8211;</p>
+<p>I have a NETGEAR WNR612 router which is simple no frills device and does the job its made for. It connects to a modem with Ethernet output for Internet and connects its wired and wireless clients to Internet. Recently i decided to drop my wired broadband and go for JIOFI device which uses the Reliance Jio network and has really attractive prices.</p>
+<p><strong>Problem:</strong> How to connect my existing router to use the internet from the Jio hotspot device</p>
+<p>JioFI and other hotspot variants are technically 2 devices combined into 1 . There is a modem which takes your SIM and connects to the network for internet . There is another piece of hardware which takes this internet and creates a wifi network. The usual routers available in market assume that there will always be a wired internet available at an RJ45 Ethernet WAN port for which they have to create the wifi network. Technically if you are using a hotspot device there is no need for another router which also does the same job. Well in my case my router is responsible for creating my home LAN network and also has a much larger range than the hotspot device. I have a wireless printer which connects to my home network for print jobs. There are other devices which use the router WIFI for internet. The problem statement here was to somehow add the functionality in my router so that it can get the internet from the hotspot and beam it own Wifi network so that the other clients are not disturbed. They get the same internet as always and are unaware that anything has changed, which is how it should be.</p>
+<p>A google search revealed several posts and videos which recommend to use <a href="https://en.wikipedia.org/wiki/Wireless_distribution_system">WDS ie Wireless Distribution System</a>. My router did not support this mode. Also WDS is a variant of repeater mode which means your hotspot would be responsible for creating and maintaining the LAN using DHCP.  Your older router would act as a subordinate which is what i did not want as the hotspot did not offer much customization.</p>
+<p><strong>Solution:</strong> I put my R&amp;D hat on. I had an old Linksys router lying around on which I had installed DDWRT the powerful firmware sometime back but was not using it. <a href="http://www.dd-wrt.com">DDWRT</a>  is a beautiful and powerful piece of software which turbo chargers your routers with features which the manufactures never intended to built into the product. I had written about it in the past <a href="http://www.latish-sherigar.com/blogs/linux/cheaper-way-to-increasing-your-wifi-range/">here</a>. There are modes in which the router can be configured.</p>
+<p><a href="http://www.latish-sherigar.com/blogs/linux/wp-content/20180318_211558.jpg"><img decoding="async" class="alignnone size-medium wp-image-278" src="http://www.latish-sherigar.com/blogs/linux/wp-content/20180318_211558-300x261.jpg" alt="" width="300" height="261" /></a></p>
+<p>Access point is the mode in which we expect our routers to operate in which it converts wired to wifi. &#8216;Client&#8217; mode is what would solve my problem. In this mode the devices acts as a client and connects to the hotspot wifi and provides the internet in to the router LAN ports. This LAN port of the intermediate router needs to be connected to the WAN port of the main router. This is all that is needed.</p>
+<p>My main router now connects to the Linksys router with DDWRT which in turn connects to the wifi hotspot for internet. Another day , new learning!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/make-your-existing-router-using-hotspot-wifi-internet/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Parallel slowdown</title>
+		<link>http://localhost/blogs/linux/parallel-slowdown/</link>
+					<comments>http://localhost/blogs/linux/parallel-slowdown/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sat, 24 Feb 2018 07:22:47 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=274</guid>
+
+					<description><![CDATA[https://en.wikipedia.org/wiki/Parallel_slowdown Important concept for developers when they go full throttle on multi-threading. Too much context switching by the manager/master/coordinator becomes expensive as the parallel threads increase. Simple analogy would be to visualize a teacher teaching 20 students. If the student count is increased to 100 then we have a chaos in making as the teacher &#8230; <a href="http://localhost/blogs/linux/parallel-slowdown/" class="more-link">Continue reading <span class="screen-reader-text">Parallel slowdown</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Parallel_slowdown">https://en.wikipedia.org/wiki/Parallel_slowdown</a></p>
+<p>Important concept for developers when they go full throttle on multi-threading. Too much context switching by the manager/master/coordinator becomes expensive as the parallel threads increase. Simple analogy would be to visualize a teacher teaching 20 students. If the student count is increased to 100 then we have a chaos in making as the teacher would not be able to give enough attention to the children.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/parallel-slowdown/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>My old wired printer made wireless</title>
+		<link>http://localhost/blogs/linux/my-old-wired-printer-made-wireless/</link>
+					<comments>http://localhost/blogs/linux/my-old-wired-printer-made-wireless/#respond</comments>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 24 Dec 2017 17:34:28 +0000</pubDate>
+				<guid isPermaLink="false">http://www.latish-sherigar.com/blogs/linux/?p=268</guid>
+
+					<description><![CDATA[I have a wired HP printer which is quite old but in working condition. It was from the pre -mobile era so it assumed that it would always be sitting next to a desktop machine. Times change and we now have WIFI, mobile and everyone expects everything to be wireless and from a mobile. Being &#8230; <a href="http://localhost/blogs/linux/my-old-wired-printer-made-wireless/" class="more-link">Continue reading <span class="screen-reader-text">My old wired printer made wireless</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I have a wired HP printer which is quite old but in working condition. It was from the pre -mobile era so it assumed that it would always be sitting next to a desktop machine. Times change and we now have WIFI, mobile and everyone expects everything to be wireless and from a mobile. Being the resident IT support guy i decide to do something about it. I actually worked on it twice.</p>
+<p>The first version was few years back before the RaspberryPi came. It was setup using a ASUS router which had a USB port and tomato usb third party firmware similar to DD_WRT which magically adds features to your router which the manufacturer never intended to.I wont explain this much now as I think it wont benefit anyone  NOW (and i am too lazy to type <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" />  ).</p>
+<p>The 2nd version which I setup few months back is when the 1st version hardware stopped working and when the RaspberryPi ZeroW was launched. So I decided to go for a Pi based network print server. Its a very powerful piece of hardware and is well worth the money for the form factor. It is a full fledged Linux machine with USB and WIFI ! .This is a ideal machine to be used in kiosk type hardware. I hope they make it lot cheaper so that it becomes a no-brainer choice for such projects.</p>
+<h4>Hardware:</h4>
+<ol>
+<li>Raspberry Pi ZeroW.</li>
+<li>I had to buy a OTG cable  to connect my USB printer to the pi as the pi zerow comes in with microusb only to save space.</li>
+<li>It is powered by the commonly available 5v mobile chargers.</li>
+</ol>
+<h4>Software:</h4>
+<ol>
+<li>Installed raspbian OS which is tailor made for Pi.</li>
+<li>Setup pi to work in headless mode (no display) as it required a micro HDMI connector and i did not wanted to spend on one. This involves giving a static IP to the Pi and enabling SSH so that you can remotely log in from other machines through SSH and do whatver you want.</li>
+<li>Installed CUPS the powerful print server software which converts the innocent pi to a Network enabled printer.</li>
+</ol>
+<p><strong>Linux</strong> &#8211; I tested this setup on Fedora. Almost all linux OS&#8217;s have built in support of CUPS based printer and their configuration utilities will auto detect once you provide the IP of the pi.</p>
+<p><strong>Windows</strong> &#8211; I currently dont have a windows machine but I am pretty sure this should also work on Windows out of the box.</p>
+<p><strong>Android</strong> &#8211; There is a app available on android called LetsPrintDroid which easily setups CUPS enabled print server found on the network and allows you to print documents directly from the mobile without requiring any desktop/laptop. This is slowly becoming my preferred mode when all i want is a quick print without waiting for my desktop to be UP and running.</p>
+<p>Whenever the printer is powered ON, the pi also boots up and within a minute connects to the WIFI and is ready to serve print requests from my home network.</p>
+<p><a href="http://www.latish-sherigar.com/blogs/linux/wp-content/pi_zerow2.jpg"><img decoding="async" class="alignnone  wp-image-269" src="http://www.latish-sherigar.com/blogs/linux/wp-content/pi_zerow2-225x300.jpg" alt="" width="490" height="653" /></a></p>
+<p><a href="http://www.latish-sherigar.com/blogs/linux/wp-content/pi_zerow1.jpg"><img loading="lazy" decoding="async" class="alignnone  wp-image-270" src="http://www.latish-sherigar.com/blogs/linux/wp-content/pi_zerow1-225x300.jpg" alt="" width="494" height="659" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://localhost/blogs/linux/my-old-wired-printer-made-wireless/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
