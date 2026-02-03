@@ -13,7 +13,7 @@ permalink: /about.html
         <div class="about-card">
             <div class="profile-image">
                 <!-- Using the existing image path, adjusted for Jekyll -->
-                <img src="{{ '/img/my_cur_pic_small.PNG' | relative_url }}" alt="Latish Sherigar" onerror="this.src='https://ui-avatars.com/api/?name=Latish+Sherigar&size=200&background=random'">
+                <img src="{{ '/img/my_cur_pic_small.PNG' | relative_url }}" alt="Latish Sherigar" width="200" height="200" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Latish+Sherigar&size=200&background=random'">
             </div>
             
             <div class="bio-text">

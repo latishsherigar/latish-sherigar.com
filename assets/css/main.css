@@ -828,45 +828,39 @@ body {
 }
 
 
-/* Responsive Navigation - Horizontal Scroll */
+/* Responsive Navigation - Minimal Wrap */
 @media (max-width: 768px) {
     .main-nav .container {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        align-items: center;
+        /* Center Brand */
+        gap: 0.75rem;
         padding: 1rem 0;
-        /* Vertical padding only */
     }
 
     .nav-brand {
-        padding: 0 1.5rem;
-        margin-bottom: 0.25rem;
+        padding: 0;
+        margin-bottom: 0;
     }
 
     .nav-links {
         display: flex;
         width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 0 1.5rem 0.5rem;
-        gap: 1.5rem;
-
-        /* Hide Scrollbar */
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-        /* Smooth scroll iOS */
-    }
-
-    .nav-links::-webkit-scrollbar {
-        display: none;
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+        /* Center links */
+        gap: 0.75rem 1rem;
+        /* Vertical, Horizontal gap */
+        padding: 0 1rem;
+        overflow-x: visible;
+        /* No scroll */
     }
 
     .nav-links a {
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        padding-bottom: 2px;
-        /* For hover underline */
+        font-size: 0.9rem;
+        padding: 0.25rem 0;
+        white-space: nowrap;
     }
 
     /* Hero & Typography */
