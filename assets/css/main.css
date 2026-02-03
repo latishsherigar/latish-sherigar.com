@@ -853,3 +853,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+
+.social-btn.chess:hover {
+    color: #7fa650;
+}

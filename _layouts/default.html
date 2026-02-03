@@ -31,6 +31,8 @@
                 <a href="{{ '/blog/' | relative_url }}">iLatish</a>
                 <a href="https://github.com/latishsherigar/publicCode" target="_blank">Hobby Code</a>
                 <a href="https://in.linkedin.com/in/latishsherigar" target="_blank">LinkedIn</a>
+                <a href="https://www.chess.com/member/latishsherigar" target="_blank" id="chess-link">Chess.com <span
+                        class="chess-rating-display" style="font-size: 0.8em; opacity: 0.8;"></span></a>
                 <a href="{{ '/about.html' | relative_url }}">About</a>
             </div>
         </div>
@@ -45,6 +47,34 @@
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Fetch Chess.com rating asynchronously after page load
+        window.addEventListener('load', function () {
+            // Use setTimeout to push to end of event loop
+            setTimeout(function () {
+                fetch('https://api.chess.com/pub/player/latishsherigar/stats')
+                    .then(function (response) { return response.json(); })
+                    .then(function (data) {
+                        // Try Rapid first, then Blitz, then Bullet
+                        var rating = (data.chess_rapid && data.chess_rapid.last && data.chess_rapid.last.rating) ||
+                            (data.chess_blitz && data.chess_blitz.last && data.chess_blitz.last.rating) ||
+                            (data.chess_bullet && data.chess_bullet.last && data.chess_bullet.last.rating);
+
+                        if (rating) {
+                            var elements = document.querySelectorAll('.chess-rating-display');
+                            elements.forEach(function (el) {
+                                el.textContent = '(' + rating + ')';
+                            });
+                        }
+                    })
+                    .catch(function (err) {
+                        // Silently fail - doesn't matter for user
+                        console.log('Chess rating fetch skipped');
+                    });
+            }, 50); // Small delay to ensure render is complete
+        });
+    </script>
 </body>
 
 </html>
