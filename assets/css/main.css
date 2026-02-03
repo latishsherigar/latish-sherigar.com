@@ -903,6 +903,11 @@ body {
         align-items: stretch;
         padding: 0 2rem;
     }
+
+    .hero-profile-img {
+        width: 180px;
+        height: 180px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -928,6 +933,11 @@ body {
     .blog-grid {
         grid-template-columns: 1fr;
         /* Force single column */
+    }
+
+    .hero-profile-img {
+        width: 140px;
+        height: 140px;
     }
 }
 
