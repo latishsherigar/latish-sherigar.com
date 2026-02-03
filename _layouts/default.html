@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+    <!-- SEO -->
+    {% seo %}
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    <!-- Feed -->
+    {% feed_meta %}
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <a href="{{ '/' | relative_url }}" class="nav-brand">{{ site.title }}</a>
+            <div class="nav-links">
+                <a href="{{ '/blog/' | relative_url }}">iLatish</a>
+                <a href="https://github.com/latishsherigar/publicCode" target="_blank">Hobby Code</a>
+                <a href="https://in.linkedin.com/in/latishsherigar" target="_blank">LinkedIn</a>
+                <a href="{{ '/about.html' | relative_url }}">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
