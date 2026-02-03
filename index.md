@@ -14,7 +14,7 @@ title: Home
         </div>
         
         <div class="hero-image">
-            <img src="{{ '/img/calvin_life.jpg' | relative_url }}" alt="Calvin and Hobbes - Life" class="calvin-img" width="600" height="400" loading="eager">
+            <img src="{{ '/img/calvin_life.jpg' | relative_url }}" alt="Calvin and Hobbes - Life" class="calvin-img" loading="eager">
         </div>
         
         <p class="hero-intro">
