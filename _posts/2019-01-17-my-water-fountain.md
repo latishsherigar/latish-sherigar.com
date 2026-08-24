@@ -20,6 +20,4 @@ Working:
 
 The pump is connected to the base of the water bottle and pushes water upwards. The cap of the water bottle has holes drilled which allows the water to come out.  Also added few money plants to give it a natural look. Below are few pics and a video.
 
-<div class="video-container">
-    <iframe src="https://www.youtube.com/embed/BbR89G03KZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+[embedyt] https://www.youtube.com/watch?v=BbR89G03KZY[/embedyt]

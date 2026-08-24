@@ -5,6 +5,16 @@ layout: default
 <article class="post">
     <header class="post-header">
         <div class="container">
+            <div class="post-meta">
+                <div class="post-tags">
+                    {% for category in page.categories %}
+                    <span class="post-tag {{ category }}">{{ category }}</span>
+                    {% endfor %}
+                </div>
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %d, %Y" }}
+                </time>
+            </div>
             <h1 class="post-title">{{ page.title }}</h1>
         </div>
     </header>
@@ -14,17 +24,6 @@ layout: default
     </div>
 
     <footer class="post-footer container">
-        <div class="post-meta">
-            <div class="post-tags">
-                {% for category in page.categories %}
-                <span class="post-tag {{ category }}">{{ category }}</span>
-                {% endfor %}
-            </div>
-            <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%B %d, %Y" }}
-            </time>
-        </div>
-
         <div class="post-navigation">
             {% if page.previous.url %}
             <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
