@@ -14,6 +14,7 @@ Below is a live working video link. The alarm sound which you here in the video 
 
 
 
-<a href="https://youtube.com/shorts/x_6T33cnlcI?feature=share" target="_blank">
-Watch the video
-</a>
+
+<div class="video-container">
+    <iframe src="https://youtube.com/shorts/x_6T33cnlcI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
