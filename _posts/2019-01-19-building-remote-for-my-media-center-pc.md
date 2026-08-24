@@ -40,4 +40,6 @@ Details-:
 
 The Pro micro Arduino board has a great feature that it can act as standard USB keyboard to your PC with the help of a library. This made the work a lot easier as I then only had to read the IR remote commands and then convert them into equivalent USB keys and send them to PC. For the PC , it appears like it is just a standard keyboard and therefore no special driver or any software is required to be installed on the PC. Every IR remote sends a different set of commands for every key and after some debugging, I had the list of commands which my DVD remote was using. After coding that into the arduino code and writing some new code to map it to PC keys, the thing was working as expected. I then used a old Nokia charger which I had lying around to place the arduino and the IR receiver. Below is the working video and some pics of the board and the final product.
 
-[embedyt] https://www.youtube.com/watch?v=OQekaL9HOUY[/embedyt].
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/OQekaL9HOUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

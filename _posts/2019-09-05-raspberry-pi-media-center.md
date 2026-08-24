@@ -35,3 +35,8 @@ https://osmc.tv
 I was blown away by the performance of the setup. It was performing exactly like my desktop computer without any slowness.The audio and video play back was super smooth. I was also able to get Dolby Digital output from the sound card without any effort. OSMC is a beauty and works like a charm. Full marks to its developers.
 
 I am extremely happy with the current setup and also proud of myself (especially the remote 🙂 for getting this setup working.
+
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/OQekaL9HOUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
